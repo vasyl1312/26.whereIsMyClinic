@@ -3,3 +3,5 @@ dist
 script.txt
 clinic_files
 .env
+src/db/schema/users.ts
+src/helper/clinicQueryPush.ts

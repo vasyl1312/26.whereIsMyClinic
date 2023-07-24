@@ -15,6 +15,27 @@
       "when": 1690184769095,
       "tag": "0001_lowly_jack_power",
       "breakpoints": false
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1690188153812,
+      "tag": "0002_steep_skrulls",
+      "breakpoints": false
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1690195273263,
+      "tag": "0003_gray_captain_cross",
+      "breakpoints": false
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1690206204152,
+      "tag": "0004_luxuriant_vector",
+      "breakpoints": false
     }
   ]
 }

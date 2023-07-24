@@ -1,7 +1,16 @@
 import express, { Request, Response } from 'express'
+import { createAndRead } from '../helper/readAndCreateTable'
 // import { Clinic } from '../dataLoader' // Виправлено імпорт
 
 export const clinicsRouter = express.Router()
+
+clinicsRouter.get('/', async (req: Request, res: Response) => {
+  try {
+    // createAndRead()
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch clinics' })
+  }
+})
 
 // clinicsRouter.get('/', async (req: Request, res: Response) => {
 //   try {
