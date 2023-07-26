@@ -12,3 +12,4 @@ Realise a [backend]() part for this [task](https://www.notion.so/26-F-B-f0ae66e2
 
 1. Connect to drizzle and create table
 2. Push data to db
+3. Add a basic route for search info by column
