@@ -3,11 +3,12 @@ import { clinicsSchema } from '../db/schema/clinics'
 import { sql } from 'drizzle-orm'
 async function searchFromDB(searchValue: string, column: string) {
   try {
+    const searchTerm = `%${searchValue}%`;
     const db = await connect()
     const selected = await db
       .select()
       .from(clinicsSchema)
-      .where(sql`${clinicsSchema[column as keyof typeof clinicsSchema]} = ${searchValue}`)
+      .where(sql`${clinicsSchema[column as keyof typeof clinicsSchema]} ILIKE ${searchTerm}`)
 
     return selected
   } catch (error) {
