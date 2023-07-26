@@ -9,6 +9,8 @@
     "dk-dev": "ts-node --require tsconfig-paths/register src/db/clinicQueryPush.ts"
   },
   "dependencies": {
+    "@esri/arcgis-rest-geocoding": "^4.0.2",
+    "@esri/arcgis-rest-request": "^4.2.0",
     "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
     "dotenv": "^16.0.3",
