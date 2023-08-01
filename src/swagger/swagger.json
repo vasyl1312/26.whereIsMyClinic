@@ -1,0 +1,129 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Swagger - OpenAPI 3.0",
+    "version": "1.0.11"
+  },
+  "tags": [
+    {
+      "name": "Clinics"
+    }
+  ],
+  "paths": {
+    "/clinics?searchValue={searchValue}&column={column}": {
+      "get": {
+        "tags": ["Clinics"],
+        "summary": "Get list of all Clinics by searchValue from column",
+        "responses": {
+          "200": {
+            "description": "A list of Clinics.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Clinics"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error"
+          },
+          "400": {
+            "description": "Invalid data"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Clinics": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "integer", "example": 48 },
+            "long_name_version": { "type": "string", "example": "Physio Science" },
+            "typeform_registration_link": {
+              "type": "string",
+              "example": "https://localphysionetwork.typeform.com/to/atik1SPB#clinic_name_short=xxxxx&clinic_address_short=xxxxx"
+            },
+            "pms": { "type": "string", "example": "Cliniko" },
+            "meta-title": {
+              "type": "string",
+              "example": "Book an appointment at Physio Science, Abbotsford"
+            },
+            "meta-description": {
+              "type": "string",
+              "example": "Book a physiotherapy appointment at Physio Science, located at 2/569 Great N Road, Abbotsford NSW 2046. See their availability and book online today."
+            },
+            "slug": { "type": "string", "example": "/clinic/physio-science-abbotsford" },
+            "website": { "type": "string", "example": "https://physio-science.com.au/" },
+            "clinic_name": { "type": "string", "example": "Physio Science" },
+            "display_on_web": { "type": "string", "example": "No" },
+            "link_to_clinic_suburb_page": { "type": "string", "example": "nsw/abbotsford-2046" },
+            "full_address": {
+              "type": "string",
+              "example": "2/569 Great N Road, Abbotsford NSW 2046"
+            },
+            "city": { "type": "string", "example": "Sydney" },
+            "suburb": { "type": "string", "example": "Abbotsford" },
+            "state": { "type": "string", "example": "NSW" },
+            "postcode": { "type": "string", "example": "2046" },
+            "email": { "type": "string", "example": "info@physio-science.com.au" },
+            "phone": { "type": "string", "example": "02 9712 1242" },
+            "nearby1_txt": { "type": "string", "example": "Wareemba" },
+            "nearby1_link": { "type": "string", "example": "nsw/wareemba-2046" },
+            "nearby2_txt": { "type": "string", "example": "Canada Bay" },
+            "nearby2_link": { "type": "string", "example": "nsw/canada-bay-2046" },
+            "nearby3_txt": { "type": "string", "example": "Haberfield" },
+            "nearby3_link": { "type": "string", "example": "nsw/haberfield-2045" },
+            "nearby4_txt": { "type": "string", "example": "Rodd Point" },
+            "nearby4_link": { "type": "string", "example": "nsw/rodd-point-2046" },
+            "about_clinic": {
+              "type": "string",
+              "example": "Physio Science and their committed team take a holistic approach to patient treatment, allowing you to break free from pain, and get back to doing what you love! Located at 2/569 Great N Road, Abbotsford NSW 2046, Physio Science staff mostly work on hand pain, piriformis syndrome, and sporting injuries. Physio Science service Abbotsford, Wareemba, Canada Bay, and Haberfield. Make an inquiry on 02 9712 1242 immediately!"
+            },
+            "latitude": { "type": "number", "format": "float", "example": -33.847256914641 },
+            "longitude": { "type": "number", "format": "float", "example": 151.128043919396 }
+          }
+        }
+      },
+      "column": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "City": { "type": "string", "example": "City" },
+            "State": { "type": "string", "example": "State" },
+            "Long Name Version": { "type": "string", "example": "Long Name Version" },
+            "Typeform registration link": { "type": "string", "example": "Typeform registration link" },
+            "PMS": { "type": "string", "example": "PMS" },
+            "Meta-title": { "type": "string", "example": "Meta-title" },
+            "Meta-description": { "type": "string", "example": "Meta-description" },
+            "slug": { "type": "string", "example": "slug" },
+            "Website": { "type": "string", "example": "Website" },
+            "Clinic Name": { "type": "string", "example": "Clinic Name" },
+            "Display_on_web": { "type": "string", "example": "Display_on_web" },
+            "link to clinic suburb page": { "type": "string", "example": "link to clinic suburb page" },
+            "Full Address": { "type": "string", "example": "Full Address" },
+            "Suburb": { "type": "string", "example": "Suburb" },
+            "Postcode": { "type": "string", "example": "Postcode" },
+            "Email": { "type": "string", "example": "Email" },
+            "Phone": { "type": "string", "example": "Phone" },
+            "nearby1_txt": { "type": "string", "example": "nearby1_txt" },
+            "nearby1_link": { "type": "string", "example": "nearby1_link" },
+            "nearby2_txt": { "type": "string", "example": "nearby2_txt" },
+            "nearby2_link": { "type": "string", "example": "nearby2_link" },
+            "nearby3_txt": { "type": "string", "example": "nearby3_txt" },
+            "nearby3_link": { "type": "string", "example": "nearby3_link" },
+            "nearby4_txt": { "type": "string", "example": "nearby4_txt" },
+            "nearby4_link": { "type": "string", "example": "nearby4_link" },
+            "About Clinic": { "type": "string", "example": "About Clinic" }
+          }
+          
+        }
+      }
+    }
+  }
+}

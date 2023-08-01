@@ -15,3 +15,4 @@ Realise a [backend](https://26-where-is-my-clinic.vercel.app/) part for this [ta
 3. Add a basic route for search info by column
 4. Deploy
 5. Fix address and add Latitude and Longitude
+6. Swagger
